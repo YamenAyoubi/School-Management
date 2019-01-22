@@ -1,5 +1,6 @@
 package Project.School_Management;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class App 
@@ -16,6 +17,7 @@ public class App
     	System.out.println("enter address");
     	Student.setAddress(in.nextLine());
 
+    	
 //    	Course course1 = new Course(0, null, null, null, 0);
 //    	
 //    	Course.ToPrint();
