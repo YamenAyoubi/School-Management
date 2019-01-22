@@ -9,6 +9,7 @@ public class Course extends Student{
 	private static String StartDate;
 	private static int WeekDuration;
 	
+	
 	public Course(int iD, String courseName, String localDate, String startDate, int weekDuration) {
 		super(iD, Name, Email, Address);
 		ID = Sequence ++;

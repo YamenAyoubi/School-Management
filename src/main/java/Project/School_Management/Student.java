@@ -8,7 +8,6 @@ public class Student {
 	public static String Email;
 	public static String Address;
 	
-	
 	public Student(int iD, String name, String email, String address) {
 		super();
 		ID = Sequence ++;

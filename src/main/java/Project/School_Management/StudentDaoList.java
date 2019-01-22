@@ -10,7 +10,6 @@ public class StudentDaoList implements StudentDAO {
 	
 	List<String>Student = new ArrayList<String>();
 	
-	
 	@Override
 	public Student saveStudent(Student student) {
     	

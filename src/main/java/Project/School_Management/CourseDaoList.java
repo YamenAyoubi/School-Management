@@ -11,7 +11,6 @@ public class CourseDaoList implements CourseDAO{
 	
 	List<String>Course = new ArrayList<String>();
 
-	
 	public Course saveCourse(Course course) {
 		
     	System.out.println("enter Course name");
