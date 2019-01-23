@@ -1,26 +1,26 @@
 package Project.School_Management;
 
+import java.util.*;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Scanner;
 
-public class App 
-{
-	
-	static Scanner in = new Scanner (System.in);
-	
-    public static void main( String[] args ){
+import DataAccess.StudentDaoList;
+import Models.Student;
+import Services.Operation;
+import Services.SchoolManagement;
 
-    	System.out.println("enter name");
-    	Student.setName(in.nextLine());
-    	System.out.println("enter email");
-    	Student.setEmail(in.nextLine());
-    	System.out.println("enter address");
-    	Student.setAddress(in.nextLine());
+public class App {
 
-    	
-//    	Course course1 = new Course(0, null, null, null, 0);
-//    	
-//    	Course.ToPrint();
-    	
-    }
+	static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		System.out.println(
+				"Welcome To our School Management" + "\nPlease Select" + "\n1-Student" + "\n2-Courses" + "\n3-info");
+
+		while (true) {
+			Operation.Go();
+		}
+	}
 }

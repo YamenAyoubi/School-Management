@@ -1,9 +1,11 @@
-package Project.School_Management;
+package DataAccess;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import Models.Course;
 
 public class CourseDaoList implements CourseDAO{
 	
@@ -13,12 +15,6 @@ public class CourseDaoList implements CourseDAO{
 
 	public Course saveCourse(Course course) {
 		
-    	System.out.println("enter Course name");
-    	course.setName(in.nextLine());
-    	System.out.println("enter email");
-    	course.setStartDate(in.nextLine());
-    	System.out.println("enter address");
-    	course.setWeekDuration(in.nextInt());
 		return null;
 	}
 

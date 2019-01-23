@@ -1,21 +1,25 @@
-package Project.School_Management;
+package Models;
+
+import java.time.LocalDate;
 
 public class Course extends Student{
 	
 	private int Sequence =100000;
 	private int ID;
-	private static String CourseName;
-	private static String LocalDate;
-	private static String StartDate;
-	private static int WeekDuration;
+	private  String CourseName;
+	private  LocalDate LocalDate;
+	private  String StartDate;
+	private  int WeekDuration;
 	
 	
-	public Course(int iD, String courseName, String localDate, String startDate, int weekDuration) {
-		super(iD, Name, Email, Address);
-		ID = Sequence ++;
+
+
+
+
+	public Course(String name, String email, String address, int iD, String courseName, int weekDuration) {
+		super(name, email, address);
+		ID = iD;
 		CourseName = courseName;
-		LocalDate = localDate;
-		StartDate = startDate;
 		WeekDuration = weekDuration;
 	}
 
@@ -46,14 +50,6 @@ public class Course extends Student{
 		CourseName = courseName;
 	}
 
-	public String getLocalDate() {
-		return LocalDate;
-	}
-
-	public void setLocalDate(String localDate) {
-		LocalDate = localDate;
-	}
-
 	public String getStartDate() {
 		return StartDate;
 	}
@@ -70,10 +66,19 @@ public class Course extends Student{
 		WeekDuration = weekDuration;
 	}
 	
-	public static void ToPrint() {
-		
-		System.out.println(Student.Name+CourseName);
-		System.out.println();
+	public LocalDate getLocalDate() {
+		return LocalDate;
+	}
+
+
+	public void setLocalDate(LocalDate localDate) {
+		LocalDate = localDate;
+	}
+	
+	
+	public void ToPrint() {
+		return;
+
 	}
 	
 }

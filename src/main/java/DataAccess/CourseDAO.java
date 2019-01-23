@@ -1,7 +1,9 @@
-package Project.School_Management;
+package DataAccess;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import Models.Course;
 
 public interface CourseDAO {
 	
