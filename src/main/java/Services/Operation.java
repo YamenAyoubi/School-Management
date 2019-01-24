@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import DataAccess.CourseDaoList;
 import Models.Student;
+import Utilities.CoursDaoList_Control;
+import Utilities.StudentDaoList_Control;
 
 public class Operation {
 	static Scanner in = new Scanner(System.in);
@@ -36,35 +38,35 @@ public class Operation {
 
 			case 11:
 				System.out.println("You Can Add Here");
-				
+				StudentDaoList_Control.createStudentListDaoList();
 				break;
 				
 			case 22:
 				System.out.println("You Can Search Here");
-				
+				StudentDaoList_Control.findByName();
+				StudentDaoList_Control.findById();
 				break;
 			case 33:
 				System.out.println("You Can Delete Here");
-				
+				StudentDaoList_Control.DeleteStudent();
 				break;
 
 			
 			case 44:
 				System.out.println("You Can Add Here");
-				
+				CoursDaoList_Control.CreatNewCourse();
 				break;
 			case 55:
 				System.out.println("You Can Search Here");
-				
+				CoursDaoList_Control.findByName();
 				break;
 			case 66:
 				System.out.println("You Can Delete Here");
+				CoursDaoList_Control.removeCourse();
 				break;
-
-			
 				
 				default:
-					break;
+					System.out.println("Wong Entry");
 			}
 		}
 

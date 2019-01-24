@@ -1,6 +1,7 @@
 package Models;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
 	
@@ -8,7 +9,7 @@ public class Course {
 	private int CourseID;
 	private  String CourseName;
 	private  int WeekDuration;
-	
+	static List<Course> CoursesList = new ArrayList<>();
 
 
 	public Course(String courseName,int weekDuration) {

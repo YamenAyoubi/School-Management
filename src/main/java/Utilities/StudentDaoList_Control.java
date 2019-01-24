@@ -33,33 +33,32 @@ public class StudentDaoList_Control {
 		System.out.println("Student Address Has Been Added ");
 		theStudentList.saveStudent(STD);
 		STD.ToPrint();
+		System.out.println("Student Has Been Stored");
+		return theStudentList;
+		
+	}
+
+	public static StudentDaoList findById() {
+		System.out.println("Enter the Course id:");
+		int id = in.nextInt();
+		theStudentList.findById(id);
 		return theStudentList;
 	}
-
-	public static void findStudent() {
-		System.out.println("1=by id" + "" + "\n2=by name");
-		int Selections = in.nextInt();
-		switch (Selections) {
-		case 1:
-			System.out.println("Enter the student id:");
-			int id = in.nextInt();
-			theStudentList.findById(id);
-			break;
-		case 2:
-			System.out.println("Enter the student Name:");
-			String name = in.next();
-			theStudentList.ToPrintNewStudent(theStudentList.findByName(name));
-			break;
-		}
-
+	public static StudentDaoList findByName() {
+		System.out.println("Enter the course Name:");
+		String name = in.nextLine();
+		theStudentList.findByName(name);
+		return theStudentList;
+		
 	}
 
-	public static void DeleteStudent() {
+	public static StudentDaoList DeleteStudent() {
 		System.out.println("by id please enter the id ");
 		int id = in.nextInt();
 		theStudentList.ToPrintNewStudent(theStudentList.findById(id));
 		Student result = theStudentList.findById(id);
 		theStudentList.deleteStudent(result);
+		return theStudentList;
 
 	}
 }

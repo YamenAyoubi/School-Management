@@ -8,7 +8,7 @@ public interface CourseDAO {
 	
 	Course saveCourse(Course course);
 	Course findById(int id);
-	Course findByName(String name);
+	List<Course> findByName(String name);
 	List<Course> findAll();
 	boolean removeCourse(Course course);
 	void ToPrintCourse(Course course);

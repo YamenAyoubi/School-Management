@@ -18,7 +18,6 @@ public class StudentDaoList implements StudentDAO {
 
 		} else {
 			StudentList.add(student);
-			System.out.println(StudentList.subList(0, 200000));
 			return student;
 		}
 	}
@@ -35,13 +34,14 @@ public class StudentDaoList implements StudentDAO {
 	}
 
 	@Override
-	public Student findByName(String name) {
+	public List<Student> findByName(String name) {
+		List<Student> result = new ArrayList<>();
 		for (Student STD : StudentList) {
-			if (STD.getName() == name) {
-				return STD;
+			if (STD.getName().equalsIgnoreCase(name)) {
+				result.add(STD);
 			}
 		}
-		return null;
+		return result;
 	}
 
 	public Student findById(int id) {

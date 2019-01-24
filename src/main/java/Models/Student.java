@@ -1,5 +1,8 @@
 package Models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
 	int Sequence = 1000;
@@ -8,7 +11,8 @@ public class Student {
 	public  String Email;
 	public  String Address;
 	public  String Course;
-
+	List<Student> StudentList = new ArrayList<Student>();
+	
 	public Student( String name, String email, String address,String course) {
 		super();
 		this.ID = Sequence++;
@@ -63,6 +67,7 @@ public class Student {
 	public void ToPrint() {
 		
 		System.out.println(this.ID +" "+this.Name +" "+ this.Email+" " +this.Address);
+		
 		
 	}
 }

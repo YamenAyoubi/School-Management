@@ -10,7 +10,7 @@ public interface StudentDAO {
 	
 	Student findByEmail(String email);
 	
-	Student findByName(String name);
+	List<Student> findByName(String name);
 	
 	Student findById(int id);
 	
