@@ -1,22 +1,22 @@
 package Models;
 
-import java.time.LocalDate;
+
 
 public class Course {
 	
 	private int Sequence =100000;
-	private int ID;
+	private int CourseID;
 	private  String CourseName;
-	private  LocalDate LocalDate;
-	private  String StartDate;
 	private  int WeekDuration;
+	
 
 
-	public Course(String courseName, java.time.LocalDate now ,int weekDuration) {
+	public Course(String courseName,int weekDuration) {
 		super();
-		ID = Sequence++;
-		CourseName = courseName;
-		WeekDuration = weekDuration;
+		this.CourseID = Sequence++;
+		this.CourseName = courseName;
+		this.WeekDuration = weekDuration;
+		
 	}
 
 
@@ -32,11 +32,11 @@ public class Course {
 	}
 
 	public int getID() {
-		return ID;
+		return CourseID;
 	}
 
-	public void setID(int iD) {
-		ID = Sequence ++;
+	public void setID(int CourseID) {
+		CourseID = Sequence ++;
 	}
 
 	public String getCourseName() {
@@ -47,13 +47,7 @@ public class Course {
 		CourseName = courseName;
 	}
 
-	public String getStartDate() {
-		return StartDate;
-	}
 
-	public void setStartDate(String startDate) {
-		StartDate = startDate;
-	}
 
 	public int getWeekDuration() {
 		return WeekDuration;
@@ -62,16 +56,6 @@ public class Course {
 	public void setWeekDuration(int weekDuration) {
 		WeekDuration = weekDuration;
 	}
-	
-	public LocalDate getLocalDate() {
-		return LocalDate;
-	}
-
-
-	public void setLocalDate(LocalDate localDate) {
-		LocalDate = localDate;
-	}
-	
 	
 	public void ToPrint() {
 		return;

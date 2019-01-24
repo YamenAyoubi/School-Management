@@ -9,14 +9,16 @@ import Models.Student;
 
 public class StudentDaoList implements StudentDAO {
 
-	private static List<Student> StudentList = new ArrayList<>();
+	List<Student> StudentList = new ArrayList<Student>();
 
 	@Override
 	public Student saveStudent(Student student) throws IllegalArgumentException {
 		if (student == null) {
 			throw new IllegalArgumentException();
+
 		} else {
 			StudentList.add(student);
+			System.out.println(StudentList.subList(0, 200000));
 			return student;
 		}
 	}
@@ -53,17 +55,22 @@ public class StudentDaoList implements StudentDAO {
 	}
 
 	@Override
-	public List<Student> findAll() {
-			return StudentList;
+	public List<Student> findAll() {	
+		return StudentList.subList(0, 200000);
 
 	}
 
 	@Override
 	public boolean deleteStudent(Student student) {
 		for (Student STD : StudentList) {
-				return StudentList.remove(STD);
-			}
-		return false;
+			return StudentList.remove(STD);
 		}
-
+		return false;
+	}
+	@Override
+	public void ToPrintNewStudent(Student student) {
+		for (Student Newstudent : StudentList) {
+			System.out.println(Newstudent);
+		}
+	}
 }

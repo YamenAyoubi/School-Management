@@ -17,4 +17,6 @@ public interface StudentDAO {
 	List<Student> findAll();
 
 	boolean deleteStudent(Student student);
+
+	void ToPrintNewStudent(Student student);
 }
