@@ -20,42 +20,42 @@ public class SchoolManagement {
 		this.coursedaolist = createCourseListDaoList();
 	}
 	
-	private CourseDaoList createCourseListDaoList() {
+	public CourseDaoList createCourseListDaoList() {
 		CourseDaoList theList = new CourseDaoList();
-		Course C = new Course("Math", LocalDate.now(), 10);
-		theList.saveCourse(C);
-		C = new Course( "Swedish", LocalDate.now(), 10);
-		theList.saveCourse(C);
+		Course COR = new Course("Math", LocalDate.now(), 10);
+		theList.saveCourse(COR);
+		COR = new Course( "Swedish", LocalDate.now(), 10);
+		theList.saveCourse(COR);
 		System.out.println("Pls Add The Course Name");
 		String Name = in.next();
-		C.setCourseName(Name);
+		COR.setCourseName(Name);
 		System.out.println("Course Name Has Been Added ");
 		System.out.println("Pls Add The weekDuration");
 		int WeekDuration = in.nextInt();
-		C.setWeekDuration(WeekDuration);
+		COR.setWeekDuration(WeekDuration);
 		System.out.println("weekDuration  Has Been Added ");
-		C.ToPrint();
+		COR.ToPrint();
 		return theList;
 	}
 	public StudentDaoList createStudentListDaoList() {
 		StudentDaoList theList = new StudentDaoList();
-		Student S = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN");
-		theList.saveStudent(S);
-		S = new Student("mogh", "mog@G.COM", "mog");
-		theList.saveStudent(S);
+		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN");
+		theList.saveStudent(STD);
+		STD = new Student("mogh", "mog@G.COM", "mog");
+		theList.saveStudent(STD);
 		System.out.println("Pls Add The Name");
 		String Name = in.next();
-		S.setName(Name);
+		STD.setName(Name);
 		System.out.println("Student Name Has Been Added ");
 		System.out.println("Pls Add The Email");
 		String Email = in.next();
-		S.setEmail(Email);
+		STD.setEmail(Email);
 		System.out.println("Student Email Has Been Added ");
 		System.out.println("Pls Add The Address");
 		String Address = in.next();
-		S.setAddress(Address);
+		STD.setAddress(Address);
 		System.out.println("Student Address Has Been Added ");
-		S.ToPrint();
+		STD.ToPrint();
 		return theList;}
 		
 

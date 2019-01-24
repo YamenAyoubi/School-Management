@@ -6,12 +6,13 @@ import java.util.List;
 import java.util.Scanner;
 
 import Models.Course;
+import Models.Student;
 
 public class CourseDaoList implements CourseDAO{
 	
 	static Scanner in = new Scanner (System.in);
 	
-	List<String>Course = new ArrayList<String>();
+	List<Course> CoursesList = new ArrayList<>();
 
 	public Course saveCourse(Course course) {
 		
@@ -20,32 +21,39 @@ public class CourseDaoList implements CourseDAO{
 
 	@Override
 	public Course findById(int id) {
-		// TODO Auto-generated method stub
+		for (Course COR : CoursesList) {
+			if (COR.getID() == id) {
+				return COR;}}
+		
 		return null;
 	}
 
 	@Override
-	public List<Course> findByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Course> findByDate(LocalDate date) {
-		// TODO Auto-generated method stub
+	public Course findByName(String name) {
+		for (Course COR : CoursesList) {
+			if (COR.getCourseName() == name) {
+				return COR;}}
+		
 		return null;
 	}
 
 	@Override
 	public List<Course> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+				return CoursesList;
+				}
 
 	@Override
 	public boolean removeCourse(Course course) {
-		// TODO Auto-generated method stub
-		return false;
+		for (Course COR : CoursesList) {
+			return CoursesList.remove(COR);
+		}
+	return false;
+	}
+
+	@Override
+	public List<Course> findByDate(LocalDate date) {
+
+		return CoursesList;
 	}
 
 }

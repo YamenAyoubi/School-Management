@@ -2,7 +2,7 @@ package Models;
 
 import java.time.LocalDate;
 
-public class Course extends Student{
+public class Course {
 	
 	private int Sequence =100000;
 	private int ID;
@@ -16,12 +16,13 @@ public class Course extends Student{
 
 
 
-	public Course(String name, String email, String address, int iD, String courseName, int weekDuration) {
-		super(name, email, address);
-		ID = iD;
+	public Course(String courseName, java.time.LocalDate now ,int weekDuration) {
+		super();
+		ID = Sequence++;
 		CourseName = courseName;
 		WeekDuration = weekDuration;
 	}
+
 
 	public void AddStudentToCourse(Student student) {
 

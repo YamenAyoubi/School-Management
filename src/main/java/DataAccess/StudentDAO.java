@@ -10,11 +10,11 @@ public interface StudentDAO {
 	
 	Student findByEmail(String email);
 	
-	List<Student> findByName(String name);
+	Student findByName(String name);
 	
 	Student findById(int id);
 	
 	List<Student> findAll();
-	
+
 	boolean deleteStudent(Student student);
 }

@@ -7,7 +7,7 @@ import Models.Student;
 public class Operation {
 	static Scanner in = new Scanner (System.in);
 	static boolean Running=true;
-	static SchoolManagement theManager = new SchoolManagement();
+	static SchoolManagement Control = new SchoolManagement();
 	
 	 public static void Go(){
 		 
@@ -24,13 +24,13 @@ public class Operation {
 			
 		case 11:
 			System.out.println("You Can Add Here");
-			theManager.createStudentListDaoList();
+			Control.createStudentListDaoList();
 		
 			
 			break;
 		case 22 :
 			System.out.println("You Can Search Here");
-			theManager.findStudent();
+			Control.findStudent();
 			break;
 		case 33:
 			System.out.println("You Can Delete Here");
@@ -41,6 +41,7 @@ public class Operation {
 			Selections=in.nextInt();   			
 		case 44:
 			System.out.println("You Can Add Here");
+			Control.createCourseListDaoList();
 			break;
 		case 55 :
 			System.out.println("You Can Search Here");

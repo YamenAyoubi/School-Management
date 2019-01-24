@@ -9,8 +9,6 @@ import Models.Student;
 
 public class StudentDaoList implements StudentDAO {
 
-
-
 	private static List<Student> StudentList = new ArrayList<>();
 
 	@Override
@@ -26,25 +24,29 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public Student findByEmail(String email) {
 
+		for (Student STD : StudentList) {
+			if (STD.getEmail() == email) {
+				return STD;
+			}
+		}
 		return null;
 	}
 
-	public List<Student> findByName(String name) {
-
-		List<Student> result = new ArrayList<>();
-		for (Student student : StudentList) {
-			if (student.getName().equalsIgnoreCase(name)) {
-				result.add(student);
+	@Override
+	public Student findByName(String name) {
+		for (Student STD : StudentList) {
+			if (STD.getName() == name) {
+				return STD;
 			}
 		}
-		return result;
+		return null;
 	}
 
 	public Student findById(int id) {
 
-		for (Student student : StudentList) {
-			if (student.getID() == id) {
-				return student;
+		for (Student STD : StudentList) {
+			if (STD.getID() == id) {
+				return STD;
 			}
 		}
 		return null;
@@ -52,14 +54,17 @@ public class StudentDaoList implements StudentDAO {
 
 	@Override
 	public List<Student> findAll() {
-		StudentList.containsAll(StudentList);
-		return null;
+			return StudentList;
+
 	}
 
 	@Override
 	public boolean deleteStudent(Student student) {
-		StudentList.clear();
+		for (Student STD : StudentList) {
+				return StudentList.remove(STD);
+			}
 		return false;
-	}
+		}
+
 
 }
