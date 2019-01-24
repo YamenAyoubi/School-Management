@@ -10,10 +10,6 @@ public class Course {
 	private  LocalDate LocalDate;
 	private  String StartDate;
 	private  int WeekDuration;
-	
-	
-
-
 
 
 	public Course(String courseName, java.time.LocalDate now ,int weekDuration) {

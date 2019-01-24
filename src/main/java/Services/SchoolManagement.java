@@ -9,22 +9,22 @@ import Models.Course;
 import Models.Student;
 
 public class SchoolManagement {
-	
+
 	private StudentDaoList studentdaolist;
 	private CourseDaoList coursedaolist;
-	static Scanner in = new Scanner (System.in);
-	
+	static Scanner in = new Scanner(System.in);
+
 	public SchoolManagement() {
 		super();
 		this.studentdaolist = createStudentListDaoList();
 		this.coursedaolist = createCourseListDaoList();
 	}
-	
+
 	public CourseDaoList createCourseListDaoList() {
 		CourseDaoList theList = new CourseDaoList();
 		Course COR = new Course("Math", LocalDate.now(), 10);
 		theList.saveCourse(COR);
-		COR = new Course( "Swedish", LocalDate.now(), 10);
+		COR = new Course("Swedish", LocalDate.now(), 10);
 		theList.saveCourse(COR);
 		System.out.println("Pls Add The Course Name");
 		String Name = in.next();
@@ -37,6 +37,7 @@ public class SchoolManagement {
 		COR.ToPrint();
 		return theList;
 	}
+
 	public StudentDaoList createStudentListDaoList() {
 		StudentDaoList theList = new StudentDaoList();
 		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN");
@@ -56,12 +57,11 @@ public class SchoolManagement {
 		STD.setAddress(Address);
 		System.out.println("Student Address Has Been Added ");
 		STD.ToPrint();
-		return theList;}
-		
+		return theList;
+	}
 
-	
 	public void findStudent() {
-		int Selections=in.nextInt();
+		int Selections = in.nextInt();
 		switch (Selections) {
 		case 1:
 			System.out.println("Enter the student id:");
@@ -76,26 +76,28 @@ public class SchoolManagement {
 		default:
 			break;
 		}
-		
+
 	}
-	
+
 	public void findCourse() {
 		// TODO Auto-generated method stub
-		
+
 	}
+
 	private void printStudent(Student theStudent) {
 		System.out.println(theStudent);
-		
+
 	}
+
 	private void printStudent(List<Student> theStudents) {
 		for (Student student : theStudents) {
 			System.out.println(student);
 		}
 	}
-	
+
 	private void printCourse(Course theCourse) {
 		System.out.println(theCourse);
-		
+
 	}
 
 	public static int Selections() {
@@ -104,7 +106,7 @@ public class SchoolManagement {
 		System.out.println("1 Find by id");
 		System.out.println("2 Find by name");
 		System.out.println("3 View all students");
-		
+
 		return 0;
 
 	}
