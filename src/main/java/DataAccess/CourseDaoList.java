@@ -8,7 +8,6 @@ import java.util.Scanner;
 import Models.Course;
 import Models.Student;
 
-
 public class CourseDaoList implements CourseDAO{
 	
 	static Scanner in = new Scanner (System.in);

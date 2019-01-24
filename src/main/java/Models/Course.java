@@ -20,7 +20,6 @@ public class Course {
 		
 	}
 
-
 	public void AddStudentToCourse(Student student) {
 
 		

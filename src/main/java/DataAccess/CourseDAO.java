@@ -6,6 +6,7 @@ import Models.Course;
 
 public interface CourseDAO {
 	
+
 	Course saveCourse(Course course);
 	Course findById(int id);
 	List<Course> findByName(String name);

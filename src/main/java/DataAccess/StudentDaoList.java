@@ -57,9 +57,7 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public List<Student> findAll() {	
 		return StudentList.subList(0, 200000);
-
 	}
-
 	@Override
 	public boolean deleteStudent(Student student) {
 		for (Student STD : StudentList) {

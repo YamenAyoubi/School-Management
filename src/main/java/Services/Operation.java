@@ -69,6 +69,5 @@ public class Operation {
 					System.out.println("Wong Entry");
 			}
 		}
-
 	}
 }

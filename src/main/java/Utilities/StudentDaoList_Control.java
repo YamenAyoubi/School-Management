@@ -49,7 +49,7 @@ public class StudentDaoList_Control {
 		String name = in.nextLine();
 		theStudentList.findByName(name);
 		return theStudentList;
-		
+	
 	}
 
 	public static StudentDaoList DeleteStudent() {

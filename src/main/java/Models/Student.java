@@ -68,7 +68,6 @@ public class Student {
 		
 		System.out.println(this.ID +" "+this.Name +" "+ this.Email+" " +this.Address);
 		
-		
 	}
 }
 

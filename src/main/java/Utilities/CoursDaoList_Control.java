@@ -6,7 +6,6 @@ import java.util.Scanner;
 import DataAccess.CourseDaoList;
 import Models.Course;
 
-
 public class CoursDaoList_Control {
 
 	static Scanner in = new Scanner(System.in);
