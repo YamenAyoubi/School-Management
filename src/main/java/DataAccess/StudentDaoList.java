@@ -1,9 +1,8 @@
 package DataAccess;
 
 import java.util.*;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
+
 
 import Models.Student;
 
@@ -12,7 +11,7 @@ public class StudentDaoList implements StudentDAO {
 	List<Student> StudentList = new ArrayList<Student>();
 
 	@Override
-	public Student saveStudent(Student STD) throws IllegalArgumentException {	
+	public Student saveStudent(Student STD) throws IllegalArgumentException {
 		if (STD == null) {
 			throw new IllegalArgumentException();
 		} else {
@@ -43,7 +42,6 @@ public class StudentDaoList implements StudentDAO {
 	}
 
 	public Student findById(int id) {
-
 		for (Student STD : StudentList) {
 			if (STD.getID() == id) {
 				return STD;
@@ -60,15 +58,16 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public boolean deleteStudent(Student student) {
 		for (Student STD : StudentList) {
+			System.out.println("Stident Has Been Removed");
 			return StudentList.remove(STD);
 		}
-		return true;
+		return false;
 	}
 
 	@Override
 	public void ToPrintNewStudent(Student student) {
-		for (Student Newstudent : StudentList) {
-			System.out.println(Newstudent);
+		for (Student STD : StudentList) {
+			System.out.println(STD);
 		}
 	}
 }

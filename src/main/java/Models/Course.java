@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Course {
 	
-	private int Sequence =100000;
+	private int Sequence =0;
 	private int CourseID;
 	private  String CourseName;
 	private  int WeekDuration;
@@ -31,12 +31,12 @@ public class Course {
 		
 	}
 
-	public int getID() {
+	public int getCourseID() {
 		return CourseID;
 	}
 
-	public void setID(int CourseID) {
-		CourseID = Sequence ++;
+	public void setCourseID(int courseID) {
+		CourseID = ++Sequence;
 	}
 
 	public String getCourseName() {
@@ -58,7 +58,7 @@ public class Course {
 	}
 	
 	public void ToPrint() {
-		return;
+		System.out.println(this.getCourseID()+" "+this.getCourseName()+" "+this.getWeekDuration());
 
 	}
 	

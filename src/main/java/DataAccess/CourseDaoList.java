@@ -29,7 +29,7 @@ public class CourseDaoList implements CourseDAO{
 	@Override
 	public Course findById(int id) {
 		for (Course COR : CoursesList) {
-			if (COR.getID() == id) {
+			if (COR.getCourseID() == id) {
 				return COR;}
 			}
 		return null;
@@ -54,6 +54,7 @@ public class CourseDaoList implements CourseDAO{
 	@Override
 	public boolean removeCourse(Course course) {
 		for (Course COR : CoursesList) {
+			System.out.println("Course Has Been Removed");
 			return CoursesList.remove(COR);
 		}
 	return false;

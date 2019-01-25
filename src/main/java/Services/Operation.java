@@ -1,8 +1,6 @@
 package Services;
-import Utilities.CoursDaoList_Control;
 import Utilities.DoYouWannaDoMore;
 import Utilities.InputValidNumberAsTheList;
-import Utilities.StudentDaoList_Control;
 
 public class Operation {
 	
@@ -14,9 +12,9 @@ public class Operation {
 			
 			System.out.println("Welcome To our School Management" + 
 								"\nPlease Select" + 
-								"\n1-Student" + 
-								"\n2-Courses" + 
-								"\n3-info");
+								"\n1-|| Student ||" + 
+								"\n2-|| Courses ||" + 
+								"\n3-||  info   ||");
 			
 			int Selections = InputValidNumberAsTheList.inputNumber(1, 3);
 			
@@ -24,7 +22,10 @@ public class Operation {
 
 			case 1:
 
-				System.out.println("Welcome to Student Section" + "\n10-Add New Student" + "\n11-Search" + "\n12-Delete");
+				System.out.println("Welcome to Student Section" + 
+						"\n10-|| Add New Student ||" + 
+						"\n11-||     Search      ||" + 
+						"\n12-||     Delete      ||");
 				Selections = InputValidNumberAsTheList.inputNumber(10, 12);
 				
 				if (Selections==10) {   
@@ -32,10 +33,24 @@ public class Operation {
 					StudentDaoList_Control.createStudentListDaoList();
 					break;}
 				if (Selections==11) {
-					System.out.println("You Can Search Here");
+					System.out.println("Please Select"+
+							"\n111-||  By Name  ||"+
+							"\n112-||  By Id    ||"+ 
+							"\n113-||  By Email ||");
+					Selections=InputValidNumberAsTheList.inputNumber(111,113);
+					
+					if (Selections==111) { 
 					StudentDaoList_Control.findByName();
+					break;}
+					
+					if (Selections==112) {
 					StudentDaoList_Control.findById();
+					break;}
+					
+					if (Selections==113) {
 					StudentDaoList_Control.findByEmail();
+					break;}
+					
 					break;}
 				if (Selections==12) {   
 					System.out.println("You Can Delete Here");
@@ -43,7 +58,10 @@ public class Operation {
 					break;}
 				
 			case 2:
-				System.out.println("Welcome to Course Section" + "\n20-Add New Course" + "\n21-Search" + "\n22-Delete");
+				System.out.println("Welcome to Course Section" +
+						"\n20-|| Add New Course ||" + 
+						"\n21-||     Search     ||" + 
+						"\n22-||     Delete     ||");
 				Selections = InputValidNumberAsTheList.inputNumber(20, 22);
 			 
 				if (Selections==20) {
@@ -52,8 +70,19 @@ public class Operation {
 				break;}
 				
 				if (Selections==21) { 
-				System.out.println("You Can Search Here");
-				CoursDaoList_Control.findByName();
+					System.out.println("Please Select"+
+										"\n211-||  By Name  ||"+
+										"\n212-||  By Id    ||");
+					Selections=InputValidNumberAsTheList.inputNumber(211,212);
+					
+					if (Selections==211) { 
+					CoursDaoList_Control.findByName();
+					break;}
+					
+					if (Selections==212) {
+					CoursDaoList_Control.findById();
+					break;}
+
 				break;}
 
 
@@ -63,7 +92,7 @@ public class Operation {
 				break;}
 
 			case 3:
-				System.out.println("Mogamed & Yamen");
+				System.out.println("Designed By Mogamed & Yamen");
 				Running = false;
 				break;
 				

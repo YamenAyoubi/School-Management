@@ -1,4 +1,4 @@
-package Utilities;
+package Services;
 
 import java.util.List;
 import java.util.Scanner;
@@ -8,8 +8,9 @@ import Models.Course;
 
 public class CoursDaoList_Control {
 
-	static Scanner in = new Scanner(System.in);
-	static CourseDaoList theCoursesList = new CourseDaoList();
+	private static Scanner in = new Scanner(System.in);
+	private static CourseDaoList theCoursesList = new CourseDaoList();
+	
 	
 	public static CourseDaoList CreatNewCourse() {
 		
@@ -17,6 +18,14 @@ public class CoursDaoList_Control {
 		theCoursesList.saveCourse(COR);
 		COR = new Course("JAVA", 12);
 		theCoursesList.saveCourse(COR);
+		System.out.println("Pls Add The Course Name ");
+		String CourseName = in.next();
+		COR.setCourseName(CourseName);
+		System.out.println("Course Name Has Been Added ");
+		System.out.println("Pls Add The Course WeekDuration ");
+		int WeekDuration = in.nextInt();
+		COR.setWeekDuration(WeekDuration);
+		System.out.println("Course WeekDuration Has Been Added ");
 		return theCoursesList;
 		
 	}

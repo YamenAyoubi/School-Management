@@ -52,8 +52,7 @@ public class FindByName_IdTest {
 		
 		List<Student> result = underTest.findByName(param);
 		
-		assertTrue(result.stream()
-				.allMatch(TestStudent -> TestStudent.getName().equals(param)));
+		assertTrue(result.stream().allMatch(TestStudent -> TestStudent.getName().equals(param)));
 	}
 
 }

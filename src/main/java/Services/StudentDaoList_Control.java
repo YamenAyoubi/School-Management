@@ -1,4 +1,4 @@
-package Utilities;
+package Services;
 
 import java.util.*;
 
@@ -15,9 +15,9 @@ public class StudentDaoList_Control {
 	static StudentDaoList theStudentList = new StudentDaoList();
 
 	public static StudentDaoList createStudentListDaoList() {
-		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN", "COURSE");
+		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN", "NULL");
 		theStudentList.saveStudent(STD);
-		STD = new Student("mogh", "mog@G.COM", "mog", "COURSE");
+		STD = new Student("mogh", "mog@G.COM", "mog", "NULL");
 		theStudentList.saveStudent(STD);
 		System.out.println("Pls Add The Name ");
 		String Name = in.next();
@@ -42,12 +42,13 @@ public class StudentDaoList_Control {
 		System.out.println("Enter the Student id:");
 		int id = in.nextInt();
 		theStudentList.findById(id);
+		System.out.println(theStudentList.findById(id));
 		return theStudentList;
 	}
 	public static StudentDaoList findByName() {
 		System.out.println("Enter the Student Name:");
 		String name = in.nextLine();
-		theStudentList.findByName(name);
+		System.out.println(theStudentList.findByName(name));
 		return theStudentList;
 	
 	}
@@ -55,7 +56,7 @@ public class StudentDaoList_Control {
 	public static StudentDaoList findByEmail() {
 		System.out.println("Enter the Student email:");
 		String email = in.nextLine();
-		theStudentList.findByEmail(email);
+		System.out.println(theStudentList.findByEmail(email));
 		return theStudentList;
 	
 	}
@@ -65,7 +66,7 @@ public class StudentDaoList_Control {
 		System.out.println("Please Enter The Student ID ");
 		int id = in.nextInt();
 		Student result = theStudentList.findById(id);
-		theStudentList.deleteStudent(result);
+		System.out.println(theStudentList.deleteStudent(result));
 		return theStudentList;
 
 	}

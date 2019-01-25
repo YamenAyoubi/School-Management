@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Student {
 
-	int Sequence = 1000;
+	int Sequence = 0;
 	public  int ID;
 	public  String Name;
 	public  String Email;
@@ -15,19 +15,19 @@ public class Student {
 	
 	public Student( String name, String email, String address,String course) {
 		super();
-		this.ID = Sequence++;
+		this.ID = ++Sequence;
 		this.Name = name;
 		this.Email = email;
 		this.Address = address;
 		this.Course=course;
 	}
 
-	public int getID() {
-		return ID;
+	public void setID(int iD) {
+		ID = ++Sequence;
 	}
 
-	public void setID(int iD) {
-		ID = Sequence++;
+	public int getID() {
+		return ID;
 	}
 
 	public String getName() {
@@ -66,7 +66,7 @@ public class Student {
 
 	public void ToPrint() {
 		
-		System.out.println(this.ID +" "+this.Name +" "+ this.Email+" " +this.Address);
+		System.out.println(this.getID() +" "+this.Name +" "+ this.Email+" " +this.Address);
 		
 	}
 }
