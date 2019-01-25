@@ -1,4 +1,4 @@
-package Utilities;
+package Project.School_Management.Utilites;
 
 import java.util.Scanner;
 

@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import DataAccess.StudentDaoList;
-import Models.Student;
+import Project.School_Management.DataAccess.StudentDaoList;
+import Project.School_Management.Models.Student;
 
 public class AddNewPersonTest {
 	

@@ -1,11 +1,11 @@
-package Services;
+package Project.School_Management.Services;
 
 import java.util.*;
 
-import DataAccess.CourseDaoList;
-import DataAccess.StudentDaoList;
-import Models.Course;
-import Models.Student;
+import Project.School_Management.DataAccess.CourseDaoList;
+import Project.School_Management.DataAccess.StudentDaoList;
+import Project.School_Management.Models.Course;
+import Project.School_Management.Models.Student;
 
 public class StudentDaoList_Control {
 
@@ -16,9 +16,6 @@ public class StudentDaoList_Control {
 
 	public static StudentDaoList createStudentListDaoList() {
 		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN", "NULL");
-		theStudentList.saveStudent(STD);
-		STD = new Student("mogh", "mog@G.COM", "mog", "NULL");
-		theStudentList.saveStudent(STD);
 		System.out.println("Pls Add The Name ");
 		String Name = in.next();
 		STD.setName(Name);

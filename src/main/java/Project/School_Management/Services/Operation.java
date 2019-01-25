@@ -1,6 +1,6 @@
-package Services;
-import Utilities.DoYouWannaDoMore;
-import Utilities.InputValidNumberAsTheList;
+package Project.School_Management.Services;
+import Project.School_Management.Utilites.DoYouWannaDoMore;
+import Project.School_Management.Utilites.InputValidNumberAsTheList;
 
 public class Operation {
 	
@@ -27,7 +27,7 @@ public class Operation {
 						"\n11-||     Search      ||" + 
 						"\n12-||     Delete      ||"
 					   +"\n13-||     Show All    ||");
-				Selections = InputValidNumberAsTheList.inputNumber(10, 12);
+				Selections = InputValidNumberAsTheList.inputNumber(10, 13);
 				
 				if (Selections==10) {   
 					System.out.println("You Can Add Here");

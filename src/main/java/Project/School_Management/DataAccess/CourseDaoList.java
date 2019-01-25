@@ -1,12 +1,12 @@
-package DataAccess;
+package Project.School_Management.DataAccess;
 
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Models.Course;
-import Models.Student;
+import Project.School_Management.Models.Course;
+import Project.School_Management.Models.Student;
 
 public class CourseDaoList implements CourseDAO{
 	

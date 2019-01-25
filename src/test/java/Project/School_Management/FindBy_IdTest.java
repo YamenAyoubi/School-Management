@@ -9,10 +9,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import DataAccess.StudentDaoList;
-import Models.Student;
+import Project.School_Management.DataAccess.StudentDaoList;
+import Project.School_Management.Models.Student;
 
-public class FindByName_IdTest {
+public class FindBy_IdTest {
 	
 	//This is what we are going to test
 	private StudentDaoList underTest = new StudentDaoList();
@@ -36,23 +36,4 @@ public class FindByName_IdTest {
 		assertEquals(TestStudent, underTest.findById(TestStudentid));
 	}
 	
-	@Test
-	public void test_findByName() {
-		String param = "Test";
-		
-		List<Student> result = underTest.findByName(param);
-		for(Student p : result) {
-			assertEquals(param, p.getName());
-		}
-	}
-	
-	@Test
-	public void test_findByName_with_lambda() {
-		String param = "Test";
-		
-		List<Student> result = underTest.findByName(param);
-		
-		assertTrue(result.stream().allMatch(TestStudent -> TestStudent.getName().equals(param)));
-	}
-
 }

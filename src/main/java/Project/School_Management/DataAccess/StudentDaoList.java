@@ -1,10 +1,9 @@
-package DataAccess;
+package Project.School_Management.DataAccess;
 
 import java.util.*;
 import java.util.List;
 
-
-import Models.Student;
+import Project.School_Management.Models.Student;
 
 public class StudentDaoList implements StudentDAO {
 
@@ -23,7 +22,7 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public Student findByEmail(String email) {
 		for (Student STD : StudentList) {
-			if (STD.getEmail() == email) {
+			if (STD.getEmail().equals(email)) {
 				return STD;
 			}
 		}
@@ -58,7 +57,7 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public boolean deleteStudent(Student student) {
 		for (Student STD : StudentList) {
-			System.out.println("Stident Has Been Removed");
+			System.out.println("Student Has Been Removed");
 			return StudentList.remove(STD);
 		}
 		return false;

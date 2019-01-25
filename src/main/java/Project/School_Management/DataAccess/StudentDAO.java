@@ -1,8 +1,8 @@
-package DataAccess;
+package Project.School_Management.DataAccess;
 
 import java.util.List;
 
-import Models.Student;
+import Project.School_Management.Models.Student;
 
 public interface StudentDAO {
 	

@@ -1,10 +1,10 @@
-package Services;
+package Project.School_Management.Services;
 
 import java.util.List;
 import java.util.Scanner;
 
-import DataAccess.CourseDaoList;
-import Models.Course;
+import Project.School_Management.DataAccess.CourseDaoList;
+import Project.School_Management.Models.Course;
 
 public class CoursDaoList_Control {
 

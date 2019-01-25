@@ -1,8 +1,8 @@
-package DataAccess;
+package Project.School_Management.DataAccess;
 
 import java.util.List;
 
-import Models.Course;
+import Project.School_Management.Models.Course;
 
 public interface CourseDAO {
 	
