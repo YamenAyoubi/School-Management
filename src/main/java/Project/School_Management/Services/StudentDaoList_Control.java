@@ -9,7 +9,6 @@ import Project.School_Management.Models.Student;
 
 public class StudentDaoList_Control {
 
-
 	static Scanner in = new Scanner(System.in);
 
 	static StudentDaoList theStudentList = new StudentDaoList();
@@ -31,7 +30,7 @@ public class StudentDaoList_Control {
 		theStudentList.saveStudent(STD);
 		STD.ToPrint();
 		System.out.println("Student Has Been Stored");
-		return theStudentList;	
+		return theStudentList;
 	}
 
 	public static StudentDaoList findById() {
@@ -41,22 +40,22 @@ public class StudentDaoList_Control {
 		System.out.println(theStudentList.findById(id));
 		return theStudentList;
 	}
+
 	public static StudentDaoList findByName() {
 		System.out.println("Enter the Student Name:");
 		String name = in.nextLine();
 		System.out.println(theStudentList.findByName(name));
 		return theStudentList;
-	
+
 	}
-	
+
 	public static StudentDaoList findByEmail() {
 		System.out.println("Enter the Student email:");
 		String email = in.nextLine();
 		System.out.println(theStudentList.findByEmail(email));
 		return theStudentList;
-	
+
 	}
-	
 
 	public static StudentDaoList DeleteStudent() {
 		System.out.println("Please Enter The Student ID ");
@@ -66,9 +65,9 @@ public class StudentDaoList_Control {
 		return theStudentList;
 
 	}
-	
-	public static void ShowAll () {
-		
+
+	public static void ShowAll() {
+
 		System.out.println(theStudentList.findAll());
 	}
 }

@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
-	
+
 	private static int Sequence = 0;
 	private final int CourseID;
 	private String CourseName;
 	private int WeekDuration;
 	private List<Student> students = new ArrayList<>();
 
+	
 	public Course(String courseName, int weekDuration) {
 		CourseID = Sequence++;
 		CourseName = courseName;
@@ -64,5 +65,5 @@ public class Course {
 		return "Course [CourseID=" + CourseID + ", CourseName=" + CourseName + ", WeekDuration=" + WeekDuration
 				+ ", students=" + students + "]";
 	}
-	
+
 }

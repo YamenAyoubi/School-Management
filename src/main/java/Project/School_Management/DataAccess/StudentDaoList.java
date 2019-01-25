@@ -39,7 +39,6 @@ public class StudentDaoList implements StudentDAO {
 		}
 		return result;
 	}
-
 	public Student findById(int id) {
 		for (Student STD : StudentList) {
 			if (STD.getID() == id) {

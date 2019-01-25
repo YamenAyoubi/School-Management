@@ -1,6 +1,5 @@
 package Project.School_Management.Models;
 
-
 public class Student {
 
 	private static int Sequence = 0;
@@ -17,8 +16,6 @@ public class Student {
 				+ Course + "]";
 	}
 
-	
-	
 	public Student(String name, String email, String address, String course) {
 		super();
 		this.ID = ++Sequence;
@@ -70,4 +67,3 @@ public class Student {
 
 	}
 }
-

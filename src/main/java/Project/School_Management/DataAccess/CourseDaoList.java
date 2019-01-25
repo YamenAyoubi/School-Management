@@ -1,6 +1,5 @@
 package Project.School_Management.DataAccess;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,13 +7,12 @@ import java.util.Scanner;
 import Project.School_Management.Models.Course;
 import Project.School_Management.Models.Student;
 
-public class CourseDaoList implements CourseDAO{
-	
-	static Scanner in = new Scanner (System.in);
-	
+public class CourseDaoList implements CourseDAO {
+
+	static Scanner in = new Scanner(System.in);
+
 	static List<Course> CoursesList = new ArrayList<>();
 
-	
 	public Course saveCourse(Course course) {
 		if (course == null) {
 			throw new IllegalArgumentException();
@@ -30,8 +28,9 @@ public class CourseDaoList implements CourseDAO{
 	public Course findById(int id) {
 		for (Course COR : CoursesList) {
 			if (COR.getCourseID() == id) {
-				return COR;}
+				return COR;
 			}
+		}
 		return null;
 	}
 
@@ -41,15 +40,15 @@ public class CourseDaoList implements CourseDAO{
 		for (Course COR : CoursesList) {
 			if (COR.getCourseName().equalsIgnoreCase(name)) {
 				result.add(COR);
-				}
 			}
+		}
 		return result;
 	}
 
 	@Override
 	public List<Course> findAll() {
-				return CoursesList.subList(0, 200000000);
-				}
+		return CoursesList.subList(0, 200000000);
+	}
 
 	@Override
 	public boolean removeCourse(Course course) {
@@ -57,9 +56,9 @@ public class CourseDaoList implements CourseDAO{
 			System.out.println("Course Has Been Removed");
 			return CoursesList.remove(COR);
 		}
-	return false;
+		return false;
 	}
-	
+
 	@Override
 	public void ToPrintCourse(Course course) {
 		for (Course COR : CoursesList) {

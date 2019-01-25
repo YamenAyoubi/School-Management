@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputValidNumberAsTheList {
-	
+
 	static Scanner sc = new Scanner(System.in);
 
 	public int inputNumber() {
@@ -31,7 +31,8 @@ public class InputValidNumberAsTheList {
 			if (number >= startPosition && number <= endPosition)
 				break;
 			else {
-				System.out.println("Incorrect Input Pls Select Between: " + startPosition + " <=> " + endPosition + " \n");
+				System.out.println(
+						"Incorrect Input Pls Select Between: " + startPosition + " <=> " + endPosition + " \n");
 			}
 		}
 		return number;
