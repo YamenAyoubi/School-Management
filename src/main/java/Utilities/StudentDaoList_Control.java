@@ -34,28 +34,36 @@ public class StudentDaoList_Control {
 		theStudentList.saveStudent(STD);
 		STD.ToPrint();
 		System.out.println("Student Has Been Stored");
-		return theStudentList;
-		
+		theStudentList.findAll();
+		return theStudentList;	
 	}
 
 	public static StudentDaoList findById() {
-		System.out.println("Enter the Course id:");
+		System.out.println("Enter the Student id:");
 		int id = in.nextInt();
 		theStudentList.findById(id);
 		return theStudentList;
 	}
 	public static StudentDaoList findByName() {
-		System.out.println("Enter the course Name:");
+		System.out.println("Enter the Student Name:");
 		String name = in.nextLine();
 		theStudentList.findByName(name);
 		return theStudentList;
 	
 	}
+	
+	public static StudentDaoList findByEmail() {
+		System.out.println("Enter the Student email:");
+		String email = in.nextLine();
+		theStudentList.findByEmail(email);
+		return theStudentList;
+	
+	}
+	
 
 	public static StudentDaoList DeleteStudent() {
-		System.out.println("by id please enter the id ");
+		System.out.println("Please Enter The Student ID ");
 		int id = in.nextInt();
-		theStudentList.ToPrintNewStudent(theStudentList.findById(id));
 		Student result = theStudentList.findById(id);
 		theStudentList.deleteStudent(result);
 		return theStudentList;

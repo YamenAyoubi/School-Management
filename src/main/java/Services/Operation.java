@@ -35,6 +35,7 @@ public class Operation {
 					System.out.println("You Can Search Here");
 					StudentDaoList_Control.findByName();
 					StudentDaoList_Control.findById();
+					StudentDaoList_Control.findByEmail();
 					break;}
 				if (Selections==12) {   
 					System.out.println("You Can Delete Here");

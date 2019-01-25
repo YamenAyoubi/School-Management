@@ -12,19 +12,17 @@ public class StudentDaoList implements StudentDAO {
 	List<Student> StudentList = new ArrayList<Student>();
 
 	@Override
-	public Student saveStudent(Student student) throws IllegalArgumentException {
-		if (student == null) {
+	public Student saveStudent(Student STD) throws IllegalArgumentException {	
+		if (STD == null) {
 			throw new IllegalArgumentException();
-
 		} else {
-			StudentList.add(student);
-			return student;
+			StudentList.add(STD);
+			return STD;
 		}
 	}
 
 	@Override
 	public Student findByEmail(String email) {
-
 		for (Student STD : StudentList) {
 			if (STD.getEmail() == email) {
 				return STD;
@@ -55,16 +53,18 @@ public class StudentDaoList implements StudentDAO {
 	}
 
 	@Override
-	public List<Student> findAll() {	
+	public List<Student> findAll() {
 		return StudentList;
 	}
+
 	@Override
 	public boolean deleteStudent(Student student) {
 		for (Student STD : StudentList) {
 			return StudentList.remove(STD);
 		}
-		return false;
+		return true;
 	}
+
 	@Override
 	public void ToPrintNewStudent(Student student) {
 		for (Student Newstudent : StudentList) {
