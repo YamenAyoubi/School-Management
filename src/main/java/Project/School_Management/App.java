@@ -10,9 +10,6 @@ public class App {
 
 	public static void main(String[] args) {
 
-		System.out.println(
-				"Welcome To our School Management" + "\nPlease Select" + "\n1-Student" + "\n2-Courses" + "\n3-info");
-
 			Operation.Go();
 		}
 	}
