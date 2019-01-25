@@ -25,7 +25,8 @@ public class Operation {
 				System.out.println("Welcome to Student Section" + 
 						"\n10-|| Add New Student ||" + 
 						"\n11-||     Search      ||" + 
-						"\n12-||     Delete      ||");
+						"\n12-||     Delete      ||"
+					   +"\n13-||     Show All    ||");
 				Selections = InputValidNumberAsTheList.inputNumber(10, 12);
 				
 				if (Selections==10) {   
@@ -56,6 +57,10 @@ public class Operation {
 					System.out.println("You Can Delete Here");
 					StudentDaoList_Control.DeleteStudent();
 					break;}
+				if (Selections==13) {   
+					System.out.println("Student List");
+					StudentDaoList_Control.ShowAll();
+					break;}				
 				
 			case 2:
 				System.out.println("Welcome to Course Section" +

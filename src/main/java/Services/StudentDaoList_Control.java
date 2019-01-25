@@ -34,7 +34,6 @@ public class StudentDaoList_Control {
 		theStudentList.saveStudent(STD);
 		STD.ToPrint();
 		System.out.println("Student Has Been Stored");
-		theStudentList.findAll();
 		return theStudentList;	
 	}
 
@@ -69,5 +68,10 @@ public class StudentDaoList_Control {
 		System.out.println(theStudentList.deleteStudent(result));
 		return theStudentList;
 
+	}
+	
+	public static void ShowAll () {
+		
+		System.out.println(theStudentList.findAll());
 	}
 }

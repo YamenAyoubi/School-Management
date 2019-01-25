@@ -8,7 +8,7 @@ import Models.Student;
 
 public class StudentDaoList implements StudentDAO {
 
-	List<Student> StudentList = new ArrayList<Student>();
+	private static List<Student> StudentList = new ArrayList<Student>();
 
 	@Override
 	public Student saveStudent(Student STD) throws IllegalArgumentException {
