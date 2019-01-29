@@ -3,6 +3,8 @@ package Project.School_Management.Models;
 import java.util.ArrayList;
 import java.util.List;
 
+import Project.School_Management.DataAccess.CourseDaoList;
+
 public class Course {
 
 	private static int Sequence = 1;
@@ -18,7 +20,6 @@ public class Course {
 		WeekDuration = weekDuration;
 		setStudents(new ArrayList<>());
 	}
-
 	public void AddStudentToCourse(Student student) {
 
 	}

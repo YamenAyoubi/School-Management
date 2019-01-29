@@ -3,7 +3,9 @@ package Project.School_Management.DataAccess;
 import java.util.*;
 import java.util.List;
 
+import Project.School_Management.Models.Course;
 import Project.School_Management.Models.Student;
+import Project.School_Management.Services.CoursDaoList_Control;
 
 public class StudentDaoList implements StudentDAO {
 
@@ -60,12 +62,5 @@ public class StudentDaoList implements StudentDAO {
 			return StudentList.remove(STD);
 		}
 		return false;
-	}
-
-	@Override
-	public void ToPrintNewStudent(Student student) {
-		for (Student STD : StudentList) {
-			System.out.println(STD);
-		}
 	}
 }

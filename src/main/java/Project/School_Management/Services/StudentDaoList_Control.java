@@ -14,7 +14,7 @@ public class StudentDaoList_Control {
 	static StudentDaoList theStudentList = new StudentDaoList();
 
 	public static StudentDaoList createStudentListDaoList() {
-		Student STD = new Student("YAMEN", "YAMEN@G.COM", "NAYGATAN", "NULL");
+		Student STD = new Student("name", "email", "address" , "STD");
 		System.out.println("Pls Add The Name ");
 		String Name = in.next();
 		STD.setName(Name);
@@ -68,8 +68,9 @@ public class StudentDaoList_Control {
 
 	}
 
-	public static void ShowAll() {
+	public static StudentDaoList ShowAll() {
 
 		System.out.println(theStudentList.findAll());
+		return theStudentList;
 	}
 }

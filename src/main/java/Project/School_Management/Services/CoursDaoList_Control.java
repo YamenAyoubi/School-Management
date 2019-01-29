@@ -1,10 +1,11 @@
 package Project.School_Management.Services;
 
-import java.util.List;
+
 import java.util.Scanner;
 
 import Project.School_Management.DataAccess.CourseDaoList;
 import Project.School_Management.Models.Course;
+import Project.School_Management.Utilites.InputValidNumberAsTheList;
 
 public class CoursDaoList_Control {
 
@@ -18,8 +19,8 @@ public class CoursDaoList_Control {
 		String CourseName = in.next();
 		COR.setCourseName(CourseName);
 		System.out.println("Course Name Has Been Added ");
-		System.out.println("Pls Add The Course WeekDuration ");
-		int WeekDuration = in.nextInt();
+		System.out.println("Pls Add The Course WeekDuration 1 TO 36");
+		int WeekDuration = InputValidNumberAsTheList.inputNumber(1, 36);
 		COR.setWeekDuration(WeekDuration);
 		theCoursesList.saveCourse(COR);
 		COR.ToPrint();
@@ -55,6 +56,10 @@ public class CoursDaoList_Control {
 		Course course = theCoursesList.findById(id);
 		theCoursesList.removeCourse(course);
 		return theCoursesList;
-
+	}
+	
+	public static CourseDaoList AddStudentToCourse () {
+		return theCoursesList;
+			
 	}
 }

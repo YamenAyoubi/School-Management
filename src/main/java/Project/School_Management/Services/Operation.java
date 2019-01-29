@@ -23,7 +23,8 @@ public class Operation {
 			case 1:
 
 				System.out.println("Welcome to Student Section" + "\n10-|| Add New Student ||"
-						+ "\n11-||     Search      ||" + "\n12-||     Delete      ||" + "\n13-||     Show All    ||");
+						+ "\n11-||     Search      ||" + "\n12-||     Delete      ||" +
+						  "\n13-||     Show All    ||" );
 				Selections = InputValidNumberAsTheList.inputNumber(10, 13);
 
 				if (Selections == 10) {
@@ -63,12 +64,11 @@ public class Operation {
 					StudentDaoList_Control.ShowAll();
 					break;
 				}
-
 			case 2:
 				System.out.println("Welcome to Course Section" + "\n20-|| Add New Course ||"
 						+ "\n21-||     Search     ||" + "\n22-||     Delete     ||"
 						+ "\n23-||     Find All   ||");
-				Selections = InputValidNumberAsTheList.inputNumber(20, 24);
+				Selections = InputValidNumberAsTheList.inputNumber(20, 23);
 
 				if (Selections == 20) {
 					System.out.println("You Can Add Here");

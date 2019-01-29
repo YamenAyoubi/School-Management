@@ -1,5 +1,7 @@
 package Project.School_Management.Models;
 
+import Project.School_Management.DataAccess.StudentDaoList;
+
 public class Student {
 
 	private static int Sequence = 1000;
