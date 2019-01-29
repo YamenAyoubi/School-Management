@@ -43,7 +43,8 @@ public class StudentDaoList_Control {
 
 	public static StudentDaoList findByName() {
 		System.out.println("Enter the Student Name:");
-		String name = in.nextLine();
+		String name = in.next();
+		theStudentList.findByName(name);
 		System.out.println(theStudentList.findByName(name));
 		return theStudentList;
 
@@ -52,6 +53,7 @@ public class StudentDaoList_Control {
 	public static StudentDaoList findByEmail() {
 		System.out.println("Enter the Student email:");
 		String email = in.nextLine();
+		theStudentList.findByEmail(email);
 		System.out.println(theStudentList.findByEmail(email));
 		return theStudentList;
 

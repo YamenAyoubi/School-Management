@@ -19,7 +19,7 @@ public class CourseDaoList implements CourseDAO {
 
 		} else {
 			CoursesList.add(course);
-			System.out.println(CoursesList.subList(0, 200000));
+			System.out.println(CoursesList);
 			return course;
 		}
 	}
@@ -47,7 +47,7 @@ public class CourseDaoList implements CourseDAO {
 
 	@Override
 	public List<Course> findAll() {
-		return CoursesList.subList(0, 200000000);
+		return CoursesList;
 	}
 
 	@Override

@@ -14,9 +14,6 @@ public class CoursDaoList_Control {
 	public static CourseDaoList CreatNewCourse() {
 
 		Course COR = new Course("C++", 6);
-		theCoursesList.saveCourse(COR);
-		COR = new Course("JAVA", 12);
-		theCoursesList.saveCourse(COR);
 		System.out.println("Pls Add The Course Name ");
 		String CourseName = in.next();
 		COR.setCourseName(CourseName);
@@ -24,6 +21,8 @@ public class CoursDaoList_Control {
 		System.out.println("Pls Add The Course WeekDuration ");
 		int WeekDuration = in.nextInt();
 		COR.setWeekDuration(WeekDuration);
+		theCoursesList.saveCourse(COR);
+		COR.ToPrint();
 		System.out.println("Course WeekDuration Has Been Added ");
 		return theCoursesList;
 
@@ -33,6 +32,7 @@ public class CoursDaoList_Control {
 		System.out.println("Enter the Course id:");
 		int id = in.nextInt();
 		theCoursesList.findById(id);
+		System.out.println(theCoursesList.findById(id));
 		return theCoursesList;
 	}
 
@@ -44,8 +44,8 @@ public class CoursDaoList_Control {
 
 	}
 
-	List<Course> findAll() {
-		return theCoursesList.findAll();
+	public static void findAll() {
+		System.out.println(theCoursesList.findAll());
 	}
 
 	public static CourseDaoList removeCourse() {

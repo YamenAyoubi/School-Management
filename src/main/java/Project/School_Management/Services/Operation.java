@@ -10,8 +10,10 @@ public class Operation {
 	public static void Go() {
 
 		while (Running) {
-
-			System.out.println("Welcome To our School Management" + "\nPlease Select" + "\n1-|| Student ||"
+			System.out.println("====================================" );
+			System.out.println("||Welcome To our School Management||" );
+			System.out.println("====================================" );
+			System.out.println("\nPlease Select" + "\n1-|| Student ||"
 					+ "\n2-|| Courses ||" + "\n3-||  info   ||");
 
 			int Selections = InputValidNumberAsTheList.inputNumber(1, 3);
@@ -64,8 +66,9 @@ public class Operation {
 
 			case 2:
 				System.out.println("Welcome to Course Section" + "\n20-|| Add New Course ||"
-						+ "\n21-||     Search     ||" + "\n22-||     Delete     ||");
-				Selections = InputValidNumberAsTheList.inputNumber(20, 22);
+						+ "\n21-||     Search     ||" + "\n22-||     Delete     ||"
+						+ "\n23-||     Find All   ||");
+				Selections = InputValidNumberAsTheList.inputNumber(20, 24);
 
 				if (Selections == 20) {
 					System.out.println("You Can Add Here");
@@ -85,19 +88,25 @@ public class Operation {
 					if (Selections == 212) {
 						CoursDaoList_Control.findById();
 						break;
-					}
-
+					}						
 					break;
 				}
 
 				if (Selections == 22) {
 					System.out.println("You Can Delete Here");
 					CoursDaoList_Control.removeCourse();
-					break;
-				}
+					break;}
+					
+				if (Selections == 23) {
+						CoursDaoList_Control.findAll();
+						break;}
+
 
 			case 3:
+				System.out.println("===========================" );
 				System.out.println("Designed By Mogamed & Yamen");
+				System.out.println("==========Thanks===========");
+				System.out.println("===========================" );
 				Running = false;
 				break;
 
