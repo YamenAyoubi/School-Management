@@ -1,15 +1,17 @@
 package Project.School_Management.DataAccess;
 
 import java.util.*;
-import java.util.List;
-
-import Project.School_Management.Models.Course;
+import java.util.stream.Collectors;
 import Project.School_Management.Models.Student;
-import Project.School_Management.Services.CoursDaoList_Control;
+
+
 
 public class StudentDaoList implements StudentDAO {
 
 	private static List<Student> StudentList = new ArrayList<Student>();
+	static StudentDaoList theStudentList = new StudentDaoList();
+	Set<Student>set = StudentList.stream()
+			.collect(Collectors.toSet());
 
 	@Override
 	public Student saveStudent(Student STD) throws IllegalArgumentException {
@@ -41,6 +43,7 @@ public class StudentDaoList implements StudentDAO {
 		}
 		return result;
 	}
+
 	public Student findById(int id) {
 		for (Student STD : StudentList) {
 			if (STD.getID() == id) {
@@ -63,4 +66,12 @@ public class StudentDaoList implements StudentDAO {
 		}
 		return false;
 	}
+
+	@Override
+	public Student AddToCourse(String name) {
+		
+		return null;
+
+	}
+
 }

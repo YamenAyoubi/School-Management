@@ -10,7 +10,7 @@ import Project.School_Management.Models.Student;
 public class StudentDaoList_Control {
 
 	static Scanner in = new Scanner(System.in);
-
+	private static CourseDaoList theCoursesList = new CourseDaoList();
 	static StudentDaoList theStudentList = new StudentDaoList();
 
 	public static StudentDaoList createStudentListDaoList() {
@@ -72,5 +72,25 @@ public class StudentDaoList_Control {
 
 		System.out.println(theStudentList.findAll());
 		return theStudentList;
+	}
+	
+	public static StudentDaoList AddToCourse() {
+		System.out.println("Be Sure That You Have The Student ID & The Course ID");
+		System.out.println("Enter the Student id:");
+		int Studentid = in.nextInt();
+		theStudentList.findById(Studentid);
+		System.out.println(theStudentList.findById(Studentid));
+		Student Result1=theStudentList.findById(Studentid);
+		System.out.println("Enter the Course id:");
+		int Courseid = in.nextInt();
+		theCoursesList.findById(Courseid);
+		System.out.println(theCoursesList.findById(Courseid));
+		Course Result2 =theCoursesList.findById(Courseid);
+		String pcikCourseName = Result2.getCourseName();
+		Result1.setCourse(pcikCourseName);
+		System.out.println("Student Has Been Added To The Course");
+		System.out.println(Result1);
+		return theStudentList;
+		
 	}
 }

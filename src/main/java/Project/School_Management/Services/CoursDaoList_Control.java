@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import Project.School_Management.DataAccess.CourseDaoList;
 import Project.School_Management.Models.Course;
+import Project.School_Management.Models.Student;
 import Project.School_Management.Utilites.InputValidNumberAsTheList;
 
 public class CoursDaoList_Control {
@@ -58,7 +59,10 @@ public class CoursDaoList_Control {
 		return theCoursesList;
 	}
 	
+	
+	
 	public static CourseDaoList AddStudentToCourse () {
+		
 		return theCoursesList;
 			
 	}
