@@ -63,7 +63,7 @@ public class Student {
 
 	public void ToPrint() {
 
-		System.out.println(this.getID() + " " + this.Name + " " + this.Email + " " + this.Address);
+		System.out.println("[ " +"Student ID"+" "+this.getID() + "Student Name"+ " " + this.Name + "Student Email"+" " + this.Email + "Student Address"+" " + this.Address +"]");
 
 	}
 
