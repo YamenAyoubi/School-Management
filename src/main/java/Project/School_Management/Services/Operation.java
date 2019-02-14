@@ -1,18 +1,23 @@
 package Project.School_Management.Services;
 
-import Project.School_Management.Utilites.DoYouWannaDoMore;
+
+import java.util.Date;
+
 import Project.School_Management.Utilites.InputValidNumberAsTheList;
 
 public class Operation {
 
 	static boolean Running = true;
-
+	static Date date = new Date();
 	public static void Go() {
 
+		
 		while (Running) {
+			
 			System.out.println("====================================");
 			System.out.println("||Welcome To our School Management||");
 			System.out.println("====================================");
+			System.out.println("===="+ date.toString() +"====");
 			System.out.println(
 					"\nPlease Select From The List" + "\n1-|| Student ||" + "\n2-|| Courses ||" + "\n3-||  info   ||");
 
@@ -21,7 +26,6 @@ public class Operation {
 			switch (Selections) {
 
 			case 1:
-
 				Case1.CaseOneActions();
 				break;
 
