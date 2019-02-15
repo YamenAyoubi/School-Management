@@ -6,8 +6,7 @@ import Project.School_Management.Utilites.InputValidNumberAsTheList;
 public class Case1 {
 	
 	public static void CaseOneActions () {
-		
-		
+				
 		System.out.println("Welcome to Student Section" + "\n10-|| Add New Student ||"
 				+ "\n11-||     Search      ||" + "\n12-||     Delete      ||" +
 				  "\n13-||     Show All    ||" +"\n14-||    ADD Course    ||");

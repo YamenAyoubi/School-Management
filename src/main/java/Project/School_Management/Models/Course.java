@@ -13,7 +13,6 @@ public class Course {
 	private int WeekDuration;
 	private List<Student> students = new ArrayList<>();
 
-	
 	public Course(String courseName, int weekDuration) {
 		CourseID = Sequence++;
 		CourseName = courseName;

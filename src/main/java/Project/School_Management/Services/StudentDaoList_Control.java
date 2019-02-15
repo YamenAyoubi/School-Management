@@ -91,6 +91,5 @@ public class StudentDaoList_Control {
 		System.out.println("Student Has Been Added To The Course");
 		System.out.println(Result1);
 		return theStudentList;
-		
 	}
 }

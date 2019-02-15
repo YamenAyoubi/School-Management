@@ -63,7 +63,6 @@ public class CoursDaoList_Control {
 	
 	public static CourseDaoList AddStudentToCourse () {
 		
-		return theCoursesList;
-			
+		return theCoursesList;	
 	}
 }

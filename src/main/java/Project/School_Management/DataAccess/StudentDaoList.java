@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 import Project.School_Management.Models.Student;
 
 
-
 public class StudentDaoList implements StudentDAO {
 
 	private static List<Student> StudentList = new ArrayList<Student>();
@@ -71,7 +70,6 @@ public class StudentDaoList implements StudentDAO {
 	public Student AddToCourse(String name) {
 		
 		return null;
-
 	}
 
 }

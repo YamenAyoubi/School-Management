@@ -11,7 +11,6 @@ public class Operation {
 	static Date date = new Date();
 	public static void Go() {
 
-		
 		while (Running) {
 			
 			System.out.println("====================================");
