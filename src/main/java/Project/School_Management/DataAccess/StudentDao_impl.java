@@ -23,13 +23,14 @@ public class StudentDao_impl implements StudentDAO {
 	}
 
 	@Override
-	public Student findByEmail(String email) {
+	public List<Student>  findByEmail(String email) {
+		List<Student> result = new ArrayList<>();
 		for (Student std : StudentList) {
 			if (std.getEmail().equals(email)) {
-				return std;
+				result.add(std);
 			}
 		}
-		return null;
+		return result;
 	}
 
 	@Override

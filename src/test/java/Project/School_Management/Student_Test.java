@@ -31,7 +31,7 @@ public class Student_Test {
 
 	@Test
 	public void test_save_on_new_person() {
-		Student expected = new Student("Test", "Testquist", "sdasa", "sadsa");
+		Student expected = new Student("Test", "Testquist@gmail.com", "sdasa", "sadsa");
 		assertEquals(expected, underTest.saveStudent(expected));
 	}
 	
@@ -57,5 +57,15 @@ public class Student_Test {
 		List<Student> result = underTest.findByName(param);
 
 		assertTrue(result.stream().allMatch(TestStudent -> TestStudent.getName().equals(param)));
+	}
+	
+	@Test
+	public void test_findByEmail() {
+		
+		String param = "Testquist@gmail.com";
+		List<Student> result = underTest.findByEmail(param);
+		for (Student p : result) {
+			assertEquals(param, p.getEmail());
+		}
 	}
 }
