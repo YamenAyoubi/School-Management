@@ -5,7 +5,7 @@ import java.util.List;
 import Project.School_Management.Models.Course;
 
 
-public class CourseDaoList implements CourseDAO {
+public class CourseDao_impl implements CourseDAO {
 
 
 	static List<Course> CoursesList = new ArrayList<>();
@@ -16,7 +16,6 @@ public class CourseDaoList implements CourseDAO {
 
 		} else {
 			CoursesList.add(course);
-			System.out.println(CoursesList);
 			return course;
 		}
 	}

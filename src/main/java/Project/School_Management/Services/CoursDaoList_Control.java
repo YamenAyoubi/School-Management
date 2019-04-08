@@ -3,7 +3,7 @@ package Project.School_Management.Services;
 
 import java.util.Scanner;
 
-import Project.School_Management.DataAccess.CourseDaoList;
+import Project.School_Management.DataAccess.CourseDao_impl;
 import Project.School_Management.Models.Course;
 import Project.School_Management.Models.Student;
 import Project.School_Management.Utilites.InputValidNumberAsTheList;
@@ -11,9 +11,9 @@ import Project.School_Management.Utilites.InputValidNumberAsTheList;
 public class CoursDaoList_Control {
 
 	private static Scanner in = new Scanner(System.in);
-	private static CourseDaoList theCoursesList = new CourseDaoList();
+	private static CourseDao_impl theCoursesList = new CourseDao_impl();
 
-	public static CourseDaoList CreatNewCourse() {
+	public static CourseDao_impl CreatNewCourse() {
 		
 		Course cor = new Course("C++", 6);
 		System.out.println("Pls Add The Course Name ");
@@ -30,7 +30,7 @@ public class CoursDaoList_Control {
 
 	}
 
-	public static CourseDaoList findById() {
+	public static CourseDao_impl findById() {
 		System.out.println("Enter the Course id:");
 		int id = in.nextInt();
 		theCoursesList.findById(id);
@@ -38,7 +38,7 @@ public class CoursDaoList_Control {
 		return theCoursesList;
 	}
 
-	public static CourseDaoList findByName() {
+	public static CourseDao_impl findByName() {
 		System.out.println("Enter the course Name:");
 		String name = in.nextLine();
 		theCoursesList.findByName(name);
@@ -50,7 +50,7 @@ public class CoursDaoList_Control {
 		System.out.println(theCoursesList.findAll());
 	}
 
-	public static CourseDaoList removeCourse() {
+	public static CourseDao_impl removeCourse() {
 		System.out.println("by id please enter the Course id ");
 		int id = in.nextInt();
 		theCoursesList.toPrintCourse(theCoursesList.findById(id));
@@ -61,7 +61,7 @@ public class CoursDaoList_Control {
 	
 	
 	
-	public static CourseDaoList AddStudentToCourse () {
+	public static CourseDao_impl AddStudentToCourse () {
 		
 		return theCoursesList;	
 	}

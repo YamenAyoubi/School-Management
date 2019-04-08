@@ -5,10 +5,10 @@ import java.util.stream.Collectors;
 import Project.School_Management.Models.Student;
 
 
-public class StudentDaoList implements StudentDAO {
+public class StudentDao_impl implements StudentDAO {
 
 	private static List<Student> StudentList = new ArrayList<Student>();
-	static StudentDaoList theStudentList = new StudentDaoList();
+	static StudentDao_impl theStudentList = new StudentDao_impl();
 	Set<Student>set = StudentList.stream()
 			.collect(Collectors.toSet());
 

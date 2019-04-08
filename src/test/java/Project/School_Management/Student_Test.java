@@ -1,19 +1,20 @@
 package Project.School_Management;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import Project.School_Management.DataAccess.StudentDaoList;
+import Project.School_Management.DataAccess.StudentDao_impl;
 import Project.School_Management.Models.Student;
 
-public class FindByName_Test {
+public class Student_Test {
 
 	// This is what we are going to test
-	private StudentDaoList underTest = new StudentDaoList();
+	private StudentDao_impl underTest =new StudentDao_impl();
 
 	// Is used in findById test
 	private Student TestStudent;
@@ -29,6 +30,17 @@ public class FindByName_Test {
 	}
 
 	@Test
+	public void test_save_on_new_person() {
+		Student expected = new Student("Test", "Testquist", "sdasa", "sadsa");
+		assertEquals(expected, underTest.saveStudent(expected));
+	}
+	
+	@Test
+	public void test_findById_return_testPerson() {
+		assertEquals(TestStudent, underTest.findById(TestStudentid));
+	}
+	
+	@Test
 	public void test_findByName() {
 		String param = "Test";
 
@@ -36,5 +48,14 @@ public class FindByName_Test {
 		for (Student p : result) {
 			assertEquals(param, p.getName());
 		}
+	}
+	
+	@Test
+	public void test_findByName_with_lambda() {
+		String param = "Test";
+
+		List<Student> result = underTest.findByName(param);
+
+		assertTrue(result.stream().allMatch(TestStudent -> TestStudent.getName().equals(param)));
 	}
 }

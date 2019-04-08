@@ -3,7 +3,7 @@ package Project.School_Management.Models;
 import java.util.ArrayList;
 import java.util.List;
 
-import Project.School_Management.DataAccess.CourseDaoList;
+import Project.School_Management.DataAccess.CourseDao_impl;
 
 public class Course {
 
