@@ -34,5 +34,4 @@ public class FindBy_IdTest {
 	public void test_findById_return_testPerson() {
 		assertEquals(TestStudent, underTest.findById(TestStudentid));
 	}
-
 }

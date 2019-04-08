@@ -18,5 +18,5 @@ public interface StudentDAO {
 
 	boolean deleteStudent(Student student);
 	
-	Student AddToCourse(String name);
+	Student addToCourse(String name);
 }

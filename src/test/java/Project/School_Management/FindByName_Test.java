@@ -37,5 +37,4 @@ public class FindByName_Test {
 			assertEquals(param, p.getName());
 		}
 	}
-
 }

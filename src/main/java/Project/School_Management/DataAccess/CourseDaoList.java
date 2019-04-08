@@ -26,9 +26,9 @@ public class CourseDaoList implements CourseDAO {
 
 	@Override
 	public Course findById(int id) {
-		for (Course COR : CoursesList) {
-			if (COR.getCourseID() == id) {
-				return COR;
+		for (Course cor : CoursesList) {
+			if (cor.getCourseID() == id) {
+				return cor;
 			}
 		}
 		return null;
@@ -37,9 +37,9 @@ public class CourseDaoList implements CourseDAO {
 	@Override
 	public List<Course> findByName(String name) {
 		List<Course> result = new ArrayList<>();
-		for (Course COR : CoursesList) {
-			if (COR.getCourseName().equalsIgnoreCase(name)) {
-				result.add(COR);
+		for (Course cor : CoursesList) {
+			if (cor.getCourseName().equalsIgnoreCase(name)) {
+				result.add(cor);
 			}
 		}
 		return result;
@@ -52,17 +52,17 @@ public class CourseDaoList implements CourseDAO {
 
 	@Override
 	public boolean removeCourse(Course course) {
-		for (Course COR : CoursesList) {
+		for (Course cor : CoursesList) {
 			System.out.println("Course Has Been Removed");
-			return CoursesList.remove(COR);
+			return CoursesList.remove(cor);
 		}
 		return false;
 	}
 
 	@Override
-	public void ToPrintCourse(Course course) {
-		for (Course COR : CoursesList) {
-			System.out.println(COR);
+	public void toPrintCourse(Course course) {
+		for (Course cor : CoursesList) {
+			System.out.println(cor);
 		}
 	}
 }

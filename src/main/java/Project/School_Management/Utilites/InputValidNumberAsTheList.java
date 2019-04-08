@@ -10,7 +10,6 @@ public class InputValidNumberAsTheList {
 	public int inputNumber() {
 		return inputNumber();
 	}
-
 	public static int inputNumber(int startPosition, int endPosition) {
 		int number = 0;
 		boolean run = true;

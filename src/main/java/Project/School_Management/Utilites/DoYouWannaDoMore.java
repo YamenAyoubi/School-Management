@@ -21,5 +21,4 @@ public class DoYouWannaDoMore {
 	public static String GetPlaySystemAgainAnswer() {
 		return in.nextLine();
 	}
-
 }

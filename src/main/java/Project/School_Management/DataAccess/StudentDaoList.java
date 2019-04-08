@@ -13,20 +13,20 @@ public class StudentDaoList implements StudentDAO {
 			.collect(Collectors.toSet());
 
 	@Override
-	public Student saveStudent(Student STD) throws IllegalArgumentException {
-		if (STD == null) {
+	public Student saveStudent(Student std) throws IllegalArgumentException {
+		if (std == null) {
 			throw new IllegalArgumentException();
 		} else {
-			StudentList.add(STD);
-			return STD;
+			StudentList.add(std);
+			return std;
 		}
 	}
 
 	@Override
 	public Student findByEmail(String email) {
-		for (Student STD : StudentList) {
-			if (STD.getEmail().equals(email)) {
-				return STD;
+		for (Student std : StudentList) {
+			if (std.getEmail().equals(email)) {
+				return std;
 			}
 		}
 		return null;
@@ -35,18 +35,18 @@ public class StudentDaoList implements StudentDAO {
 	@Override
 	public List<Student> findByName(String name) {
 		List<Student> result = new ArrayList<>();
-		for (Student STD : StudentList) {
-			if (STD.getName().equalsIgnoreCase(name)) {
-				result.add(STD);
+		for (Student std : StudentList) {
+			if (std.getName().equalsIgnoreCase(name)) {
+				result.add(std);
 			}
 		}
 		return result;
 	}
 
 	public Student findById(int id) {
-		for (Student STD : StudentList) {
-			if (STD.getID() == id) {
-				return STD;
+		for (Student std : StudentList) {
+			if (std.getID() == id) {
+				return std;
 			}
 		}
 		return null;
@@ -59,15 +59,15 @@ public class StudentDaoList implements StudentDAO {
 
 	@Override
 	public boolean deleteStudent(Student student) {
-		for (Student STD : StudentList) {
+		for (Student std : StudentList) {
 			System.out.println("Student Has Been Removed");
-			return StudentList.remove(STD);
+			return StudentList.remove(std);
 		}
 		return false;
 	}
 
 	@Override
-	public Student AddToCourse(String name) {
+	public Student addToCourse(String name) {
 		
 		return null;
 	}

@@ -31,5 +31,4 @@ public class AddNewPersonTest {
 		Student expected = new Student("Test", "Testquist", "sdasa", "sadsa");
 		assertEquals(expected, underTest.saveStudent(expected));
 	}
-
 }

@@ -7,11 +7,11 @@ import Project.School_Management.Utilites.InputValidNumberAsTheList;
 
 public class Operation {
 
-	static boolean Running = true;
+	static boolean running = true;
 	static Date date = new Date();
 	public static void Go() {
 
-		while (Running) {
+		while (running) {
 			
 			System.out.println("====================================");
 			System.out.println("||Welcome To our School Management||");
@@ -25,11 +25,11 @@ public class Operation {
 			switch (Selections) {
 
 			case 1:
-				Case1.CaseOneActions();
+				Case1.caseOneActions();
 				break;
 
 			case 2:
-				Case2.CaseTwoActions();
+				Case2.caseTwoActions();
 				break;
 
 			case 3:
@@ -37,7 +37,7 @@ public class Operation {
 				System.out.println("Designed By Mogamed & Yamen");
 				System.out.println("==========Thanks===========");
 				System.out.println("===========================");
-				Running = false;
+				running = false;
 				break;
 
 			default:

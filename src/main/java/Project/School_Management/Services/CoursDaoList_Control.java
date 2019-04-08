@@ -14,17 +14,17 @@ public class CoursDaoList_Control {
 	private static CourseDaoList theCoursesList = new CourseDaoList();
 
 	public static CourseDaoList CreatNewCourse() {
-
-		Course COR = new Course("C++", 6);
+		
+		Course cor = new Course("C++", 6);
 		System.out.println("Pls Add The Course Name ");
-		String CourseName = in.next();
-		COR.setCourseName(CourseName);
+		String courseName = in.next();
+		cor.setCourseName(courseName);
 		System.out.println("Course Name Has Been Added ");
 		System.out.println("Pls Add The Course WeekDuration 1 TO 36");
-		int WeekDuration = InputValidNumberAsTheList.inputNumber(1, 36);
-		COR.setWeekDuration(WeekDuration);
-		theCoursesList.saveCourse(COR);
-		COR.ToPrint();
+		int weekduration = InputValidNumberAsTheList.inputNumber(1, 36);
+		cor.setWeekDuration(weekduration);
+		theCoursesList.saveCourse(cor);
+		cor.ToPrint();
 		System.out.println("Course WeekDuration Has Been Added ");
 		return theCoursesList;
 
@@ -53,7 +53,7 @@ public class CoursDaoList_Control {
 	public static CourseDaoList removeCourse() {
 		System.out.println("by id please enter the Course id ");
 		int id = in.nextInt();
-		theCoursesList.ToPrintCourse(theCoursesList.findById(id));
+		theCoursesList.toPrintCourse(theCoursesList.findById(id));
 		Course course = theCoursesList.findById(id);
 		theCoursesList.removeCourse(course);
 		return theCoursesList;

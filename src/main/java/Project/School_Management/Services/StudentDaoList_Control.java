@@ -14,21 +14,21 @@ public class StudentDaoList_Control {
 	static StudentDaoList theStudentList = new StudentDaoList();
 
 	public static StudentDaoList createStudentListDaoList() {
-		Student STD = new Student("name", "email", "address" , "STD");
+		Student std = new Student("name", "email", "address" , "STD");
 		System.out.println("Pls Add The Name ");
-		String Name = in.next();
-		STD.setName(Name);
+		String name = in.next();
+		std.setName(name);
 		System.out.println("Student Name Has Been Added ");
 		System.out.println("Pls Add The Email");
 		String Email = in.next();
-		STD.setEmail(Email);
+		std.setEmail(Email);
 		System.out.println("Student Email Has Been Added ");
 		System.out.println("Pls Add The Address");
-		String Address = in.next();
-		STD.setAddress(Address);
+		String address = in.next();
+		std.setAddress(address);
 		System.out.println("Student Address Has Been Added ");
-		theStudentList.saveStudent(STD);
-		STD.ToPrint();
+		theStudentList.saveStudent(std);
+		std.toPrint();
 		System.out.println("Student Has Been Stored");
 		return theStudentList;
 	}
@@ -77,19 +77,19 @@ public class StudentDaoList_Control {
 	public static StudentDaoList AddToCourse() {
 		System.out.println("Be Sure That You Have The Student ID & The Course ID");
 		System.out.println("Enter the Student id:");
-		int Studentid = in.nextInt();
-		theStudentList.findById(Studentid);
-		System.out.println(theStudentList.findById(Studentid));
-		Student Result1=theStudentList.findById(Studentid);
+		int studentId = in.nextInt();
+		theStudentList.findById(studentId);
+		System.out.println(theStudentList.findById(studentId));
+		Student result1=theStudentList.findById(studentId);
 		System.out.println("Enter the Course id:");
-		int Courseid = in.nextInt();
-		theCoursesList.findById(Courseid);
-		System.out.println(theCoursesList.findById(Courseid));
-		Course Result2 =theCoursesList.findById(Courseid);
-		String pcikCourseName = Result2.getCourseName();
-		Result1.setCourse(pcikCourseName);
+		int courseId = in.nextInt();
+		theCoursesList.findById(courseId);
+		System.out.println(theCoursesList.findById(courseId));
+		Course result2 =theCoursesList.findById(courseId);
+		String pcikCourseName = result2.getCourseName();
+		result1.setCourse(pcikCourseName);
 		System.out.println("Student Has Been Added To The Course");
-		System.out.println(Result1);
+		System.out.println(result1);
 		return theStudentList;
 	}
 }
