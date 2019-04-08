@@ -2,14 +2,11 @@ package Project.School_Management.DataAccess;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
 import Project.School_Management.Models.Course;
-import Project.School_Management.Models.Student;
+
 
 public class CourseDaoList implements CourseDAO {
 
-	static Scanner in = new Scanner(System.in);
 
 	static List<Course> CoursesList = new ArrayList<>();
 
