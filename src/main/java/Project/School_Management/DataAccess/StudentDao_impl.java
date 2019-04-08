@@ -66,10 +66,5 @@ public class StudentDao_impl implements StudentDAO {
 		return false;
 	}
 
-	@Override
-	public Student addToCourse(String name) {
-		
-		return null;
-	}
 
 }
