@@ -3,14 +3,18 @@ package Project.School_Management.cases;
 
 import java.util.Date;
 
-import Project.School_Management.Utilites.InputValidNumberAsTheList;
+import Project.School_Management.utility.ScannerInputDAO;
+import Project.School_Management.utility.ScannerInputDAO_impl;
+
 
 public class Operation {
 
-	static boolean running = true;
-	static Date date = new Date();
+	private static  ScannerInputDAO scanerInput=new ScannerInputDAO_impl();
+	
 	public static void Go() {
-
+		
+		boolean running = true;
+		 Date date = new Date();
 		while (running) {
 			
 			System.out.println("====================================");
@@ -18,9 +22,9 @@ public class Operation {
 			System.out.println("====================================");
 			System.out.println("===="+ date.toString() +"====");
 			System.out.println(
-					"\nPlease Select From The List" + "\n1-|| Student ||" + "\n2-|| Courses ||" + "\n3-||  info   ||");
+					"\nPlease Select From The List" + "\n1-|| Students  ||" + "\n2-|| Courses  ||" + "\n3-||  info    ||");
 
-			int Selections = InputValidNumberAsTheList.inputNumber(1, 3);
+			int Selections = scanerInput.inputNumber(1, 3);
 
 			switch (Selections) {
 
@@ -43,6 +47,9 @@ public class Operation {
 			default:
 				System.out.println("Worng Entry PLs check the Options");
 			}
+			
+			System.out.println("Do You Want Open The System Again ? (Y/N)");
+			running = scanerInput.PlaySystemAgain();
 		}
 	}
 }

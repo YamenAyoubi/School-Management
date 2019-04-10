@@ -1,16 +1,17 @@
 package Project.School_Management.Services;
 
 import Project.School_Management.DataAccess.CourseDao_impl;
-import Project.School_Management.DataAccess.ScannerInputDAO_impl;
 import Project.School_Management.Models.Course;
-import Project.School_Management.Utilites.InputValidNumberAsTheList;
+import Project.School_Management.utility.ScannerInputDAO;
+import Project.School_Management.utility.ScannerInputDAO_impl;
+
 
 public class CoursDaoList_Control {
 
-	private static ScannerInputDAO_impl scanerInput=new ScannerInputDAO_impl();
-	private static CourseDao_impl theCoursesList = new CourseDao_impl();
+	private  ScannerInputDAO scanerInput=new ScannerInputDAO_impl();
+	private  CourseDao_impl theCoursesList = new CourseDao_impl();
 
-	public static CourseDao_impl CreatNewCourse() {
+	public  CourseDao_impl CreatNewCourse() {
 		
 		Course cor = new Course("C++", 6);
 		System.out.println("Pls Add The Course Name ");
@@ -18,7 +19,7 @@ public class CoursDaoList_Control {
 		cor.setCourseName(courseName);
 		System.out.println("Course Name Has Been Added ");
 		System.out.println("Pls Add The Course WeekDuration 1 TO 36");
-		int weekduration = InputValidNumberAsTheList.inputNumber(1, 36);
+		int weekduration = scanerInput.inputNumber(1, 36);
 		cor.setWeekDuration(weekduration);
 		theCoursesList.saveCourse(cor);
 		cor.ToPrint();
@@ -27,7 +28,7 @@ public class CoursDaoList_Control {
 
 	}
 
-	public static CourseDao_impl findById() {
+	public  CourseDao_impl findById() {
 		System.out.println("Enter the Course id:");
 		int id = scanerInput.getInt();
 		theCoursesList.findById(id);
@@ -35,7 +36,7 @@ public class CoursDaoList_Control {
 		return theCoursesList;
 	}
 
-	public static CourseDao_impl findByName() {
+	public  CourseDao_impl findByName() {
 		System.out.println("Enter the course Name:");
 		String name = scanerInput.getString();
 		theCoursesList.findByName(name);
@@ -43,11 +44,11 @@ public class CoursDaoList_Control {
 
 	}
 
-	public static void findAll() {
+	public  void findAll() {
 		System.out.println(theCoursesList.findAll());
 	}
 
-	public static CourseDao_impl removeCourse() {
+	public  CourseDao_impl removeCourse() {
 		System.out.println("by id please enter the Course id ");
 		int id = scanerInput.getInt();
 		theCoursesList.toPrintCourse(theCoursesList.findById(id));
@@ -58,7 +59,7 @@ public class CoursDaoList_Control {
 	
 	
 	
-	public static CourseDao_impl AddStudentToCourse () {
+	public  CourseDao_impl AddStudentToCourse () {
 		
 		return theCoursesList;	
 	}

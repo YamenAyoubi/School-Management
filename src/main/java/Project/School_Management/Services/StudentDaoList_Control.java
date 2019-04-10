@@ -1,18 +1,19 @@
 package Project.School_Management.Services;
 
+import Project.School_Management.DataAccess.CourseDAO;
 import Project.School_Management.DataAccess.CourseDao_impl;
-import Project.School_Management.DataAccess.ScannerInputDAO_impl;
 import Project.School_Management.DataAccess.StudentDao_impl;
 import Project.School_Management.Models.Course;
 import Project.School_Management.Models.Student;
+import Project.School_Management.utility.ScannerInputDAO_impl;
 
 public class StudentDaoList_Control {
 
-	private static ScannerInputDAO_impl scanerInput=new ScannerInputDAO_impl();
-	private static CourseDao_impl theCoursesList = new CourseDao_impl();
-	static StudentDao_impl theStudentList = new StudentDao_impl();
+	private  ScannerInputDAO_impl scanerInput=new ScannerInputDAO_impl();
+	private  CourseDAO theCoursesList = new CourseDao_impl();
+	StudentDao_impl theStudentList = new StudentDao_impl();
 
-	public static StudentDao_impl createStudentListDaoList() {
+	public  StudentDao_impl createStudentListDaoList() {
 		Student std = new Student("name", "email", "address" , "STD");
 		System.out.println("Pls Add The Name ");
 		String name = scanerInput.getString();
@@ -32,7 +33,7 @@ public class StudentDaoList_Control {
 		return theStudentList;
 	}
 
-	public static StudentDao_impl findById() {
+	public  StudentDao_impl findById() {
 		System.out.println("Enter the Student id:");
 		int id = scanerInput.getInt();
 		theStudentList.findById(id);
@@ -40,7 +41,7 @@ public class StudentDaoList_Control {
 		return theStudentList;
 	}
 
-	public static StudentDao_impl findByName() {
+	public  StudentDao_impl findByName() {
 		System.out.println("Enter the Student Name:");
 		String name = scanerInput.getString();
 		theStudentList.findByName(name);
@@ -49,7 +50,7 @@ public class StudentDaoList_Control {
 
 	}
 
-	public static StudentDao_impl findByEmail() {
+	public  StudentDao_impl findByEmail() {
 		System.out.println("Enter the Student email:");
 		String email = scanerInput.getString();
 		theStudentList.findByEmail(email);
@@ -58,7 +59,7 @@ public class StudentDaoList_Control {
 
 	}
 
-	public static StudentDao_impl DeleteStudent() {
+	public  StudentDao_impl DeleteStudent() {
 		System.out.println("Please Enter The Student ID ");
 		int id = scanerInput.getInt();
 		Student result = theStudentList.findById(id);
@@ -67,19 +68,19 @@ public class StudentDaoList_Control {
 
 	}
 
-	public static StudentDao_impl ShowAll() {
+	public  StudentDao_impl ShowAll() {
 
 		System.out.println(theStudentList.findAll());
 		return theStudentList;
 	}
 	
-	public static StudentDao_impl AddToCourse() {
+	public  StudentDao_impl AddToCourse() {
 		System.out.println("Be Sure That You Have The Student ID & The Course ID");
 		System.out.println("Enter the Student id:");
 		int studentId = scanerInput.getInt();
 		theStudentList.findById(studentId);
-		System.out.println(theStudentList.findById(studentId));
 		Student result1=theStudentList.findById(studentId);
+		result1.toPrint();
 		System.out.println("Enter the Course id:");
 		int courseId = scanerInput.getInt();
 		theCoursesList.findById(courseId);

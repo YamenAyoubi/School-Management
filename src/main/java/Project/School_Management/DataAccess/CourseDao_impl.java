@@ -24,7 +24,7 @@ public class CourseDao_impl implements CourseDAO {
 	public Course findById(int id) {
 		for (Course cor : CoursesList) {
 			if (cor.getCourseID() == id) {
-				return cor;
+				cor.ToPrint();
 			}
 		}
 		return null;

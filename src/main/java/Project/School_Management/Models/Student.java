@@ -9,12 +9,6 @@ public class Student {
 	private String address;
 	private String course;
 
-	@Override
-	public String toString() {
-
-		return "Student [ID=" + id + ", Name=" + name + ", Email=" + email + ", Address=" + address + ", Course="
-				+ course + "]";
-	}
 
 	public Student(String name, String email, String address, String course) {
 		super();
@@ -73,7 +67,7 @@ public class Student {
 
 	public void toPrint() {
 
-		System.out.println("[ " +"Student ID"+" "+this.getID() + "Student Name"+ " " + this.name + "Student Email"+" " + this.email + "Student Address"+" " + this.address +"]");
+		System.out.println("[ " +"Student ID"+" "+this.getID() +" " +"Student Name"+ " " + this.name + "Student Email"+" " + this.email + "Student Address"+" " + this.address +"]");
 
 	}
 
@@ -122,4 +116,11 @@ public class Student {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", course="
+				+ course + "]";
+	}
+	
 }

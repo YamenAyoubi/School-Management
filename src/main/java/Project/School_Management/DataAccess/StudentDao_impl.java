@@ -7,10 +7,8 @@ import Project.School_Management.Models.Student;
 
 public class StudentDao_impl implements StudentDAO {
 
-	private static List<Student> StudentList = new ArrayList<Student>();
-	static StudentDao_impl theStudentList = new StudentDao_impl();
-	Set<Student>set = StudentList.stream()
-			.collect(Collectors.toSet());
+	private List<Student> StudentList = new ArrayList<Student>();
+	Set<Student> set = StudentList.stream().collect(Collectors.toSet());
 
 	@Override
 	public Student saveStudent(Student std) throws IllegalArgumentException {
@@ -23,7 +21,7 @@ public class StudentDao_impl implements StudentDAO {
 	}
 
 	@Override
-	public List<Student>  findByEmail(String email) {
+	public List<Student> findByEmail(String email) {
 		List<Student> result = new ArrayList<>();
 		for (Student std : StudentList) {
 			if (std.getEmail().equals(email)) {
@@ -43,10 +41,12 @@ public class StudentDao_impl implements StudentDAO {
 		}
 		return result;
 	}
-
+	
+	@Override
 	public Student findById(int id) {
 		for (Student std : StudentList) {
 			if (std.getID() == id) {
+//				std.toPrint();
 				return std;
 			}
 		}
@@ -66,6 +66,5 @@ public class StudentDao_impl implements StudentDAO {
 		}
 		return false;
 	}
-
 
 }

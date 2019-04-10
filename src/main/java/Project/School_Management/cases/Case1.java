@@ -1,10 +1,14 @@
 package Project.School_Management.cases;
 
 import Project.School_Management.Services.StudentDaoList_Control;
-import Project.School_Management.Utilites.DoYouWannaDoMore;
-import Project.School_Management.Utilites.InputValidNumberAsTheList;
+import Project.School_Management.utility.ScannerInputDAO;
+import Project.School_Management.utility.ScannerInputDAO_impl;
+
 
 public class Case1 {
+	
+	static StudentDaoList_Control student_control= new StudentDaoList_Control();
+	private static  ScannerInputDAO scanerInput=new ScannerInputDAO_impl();
 	
 	public static void caseOneActions () {
 				
@@ -12,7 +16,7 @@ public class Case1 {
 				+ "\n11-||     Search      ||" + "\n12-||     Delete      ||" +
 				  "\n13-||     Show All    ||" +"\n14-||    ADD Course    ||");
 		
-		int selections = InputValidNumberAsTheList.inputNumber(10, 14);
+		int selections = scanerInput.inputNumber(10, 14);
 		
 		boolean running = true;
 		
@@ -20,26 +24,26 @@ public class Case1 {
 			
 		if (selections == 10) {
 			System.out.println("You Can Add Here");
-			StudentDaoList_Control.createStudentListDaoList();
+			student_control.createStudentListDaoList();
 			break;
 		}
 		if (selections == 11) {
 			System.out.println("Please Select" + "\n111-||  By Name  ||" + "\n112-||  By Id    ||"
 					+ "\n113-||  By Email ||");
-			selections = InputValidNumberAsTheList.inputNumber(111, 113);
+			selections = scanerInput.inputNumber(111, 113);
 
 			if (selections == 111) {
-				StudentDaoList_Control.findByName();
+				student_control.findByName();
 				break;
 			}
 
 			if (selections == 112) {
-				StudentDaoList_Control.findById();
+				student_control.findById();
 				break;
 			}
 
 			if (selections == 113) {
-				StudentDaoList_Control.findByEmail();
+				student_control.findByEmail();
 				break;
 			}
 
@@ -47,23 +51,20 @@ public class Case1 {
 		}
 		if (selections == 12) {
 			System.out.println("You Can Delete Here");
-			StudentDaoList_Control.DeleteStudent();
+			student_control.DeleteStudent();
 			break;
 		}
 		if (selections == 13) {
 			System.out.println("Student List");
-			StudentDaoList_Control.ShowAll();
+			student_control.ShowAll();
 			break;
 		}
 		
 		if (selections == 14) {
 			System.out.println("Select and add");
-			StudentDaoList_Control.AddToCourse();
+			student_control.AddToCourse();
 			break;}
 		
-		System.out.println("Do You Want Open The System Again ? (Y/N)");
-		String answer = DoYouWannaDoMore.GetPlaySystemAgainAnswer().toUpperCase();
-		running = DoYouWannaDoMore.PlaySystemAgain(answer);
 	}
 	}
 }
